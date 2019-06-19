@@ -1,11 +1,11 @@
 const posts = [{
-        title: 'Post One',
-        body: 'This is post one'
-    },
-    {
-        title: 'Post Two',
-        body: 'This is post two'
-    }
+    title: 'Post One',
+    body: 'This is post one'
+},
+{
+    title: 'Post Two',
+    body: 'This is post two'
+}
 ];
 
 function getPosts() {
@@ -14,7 +14,8 @@ function getPosts() {
         posts.forEach((post, index) => {
             output += `<li>${post.title}</li>`;
         });
-        document.body.innerHTML += output;
+        // document.body.innerHTML += output;
+        console.log(output)
     }, 1000);
 }
 
@@ -32,8 +33,8 @@ function createPost(post) {
 }
 
 createPost({
-        title: 'Post Three',
-        body: 'This is post three'
-    })
+    title: 'Post Three',
+    body: 'This is post three'
+})
     .then(getPosts)
     .catch(err => console.log(err));

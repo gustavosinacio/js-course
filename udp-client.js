@@ -3,7 +3,8 @@ var HOST = '127.0.0.1';
 
 var dgram = require('dgram');
 // var message = new Buffer('My KungFu is Good!');
-var message = 'dasdasd'
+// var message = { test: 'dasdasd', test2: 'sdfsfswef' }
+var message = Buffer.from('sdfsfswef')
 
 var client = dgram.createSocket('udp4');
 client.send(message, 0, message.length, PORT, HOST, (err, bytes) => {
